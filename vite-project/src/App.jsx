@@ -1,11 +1,10 @@
-import { useState } from "react";
 import "./App.css";
 import Lottery from "./Lottery";
 
 function App() {
   return (
     <>
-      <Lottery />
+      <Lottery n={5} winningSum={15} />
     </>
   );
 }
