@@ -3,9 +3,9 @@ import "./Lottery.css";
 import { addition, genRandomNum } from "./helper";
 import Ticket from "./Ticket";
 
-export default function Lottery({ n = 3, winningSum = 15 }) {
+export default function Lottery({ n = 3, winConditon }) {
   let [ticket, setTicket] = useState(genRandomNum(n));
-  let isWinning = addition(ticket) === winningSum;
+  let isWinning = winConditon(ticket);
 
   let buyTicket = () => {
     return setTicket(genRandomNum(n));
